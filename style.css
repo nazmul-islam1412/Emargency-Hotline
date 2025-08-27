@@ -1,0 +1,11 @@
+/* Font Style */
+@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400;500;600;700&display=swap');
+
+.hind-madurai-font{
+  font-family: "Hind Madurai", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Tailwind */
+@import 'tailwind.css';
