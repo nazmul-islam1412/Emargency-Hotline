@@ -33,8 +33,11 @@ callButtons.forEach(function (btn) {
 
      coins -= 20;
     coinElement.innerText = coins;
+
     const li = document.createElement("li");
-    li.innerText = `${serviceName} - ${serviceNumber}`;
+    li.innerText = `${serviceName} \n ${serviceNumber}`;
+    li.classList.add("bg-gray-200", "p-2","mt-5","rounded-[8px]");
     callHistory.appendChild(li);
   });
 });
+
