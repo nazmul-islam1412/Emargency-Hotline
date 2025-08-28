@@ -41,3 +41,9 @@ callButtons.forEach(function (btn) {
   });
 });
 
+const clearHistoryBtn = document.getElementById("clear-history");
+
+clearHistoryBtn.addEventListener("click", function() {
+    callHistory.innerHTML = ""; 
+});
+
