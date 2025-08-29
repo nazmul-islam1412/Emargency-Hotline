@@ -54,4 +54,31 @@ clearHistoryBtn.addEventListener("click", function() {
     callHistory.innerHTML = ""; 
 });
 
+// Copy Part
+
+function setupCopyButtons() {
+    const copyButtons = document.querySelectorAll(".copy-btn");
+
+    copyButtons.forEach(function(btn) {
+        btn.addEventListener("click", function() {
+            const card = btn.closest(".flex.flex-col");
+            const serviceNumber = card.querySelector(".service-number").innerText;
+
+            navigator.clipboard.writeText(serviceNumber);
+            alert("Copied: " + serviceNumber);
+
+            const copyCountElement = document.querySelector(".copy-count");
+            let copyCount = parseInt(copyCountElement.innerText);
+            copyCount++;
+            copyCountElement.innerText = copyCount;
+        });
+    });
+}
+
+setupCopyButtons();
+
+
+
+
+
 
