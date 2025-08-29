@@ -34,16 +34,24 @@ callButtons.forEach(function (btn) {
      coins -= 20;
     coinElement.innerText = coins;
 
+    const now = new Date();
+    const timeString = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
     const li = document.createElement("li");
-    li.innerText = `${serviceName} \n ${serviceNumber}`;
+    li.innerHTML = `<div class="flex justify-between items-center">
+        <div>
+          <strong>${serviceName}</strong><br>
+          ${serviceNumber}
+        </div><span class="text-gray-500 text-sm">${timeString}</span></div>`;
     li.classList.add("bg-gray-200", "p-2","mt-5","rounded-[8px]");
     callHistory.appendChild(li);
   });
 });
 
+// Clear Button part
 const clearHistoryBtn = document.getElementById("clear-history");
 
 clearHistoryBtn.addEventListener("click", function() {
     callHistory.innerHTML = ""; 
 });
+
 
